@@ -11,4 +11,7 @@ homepage = "https://tokio.rs"
 description = "Utilities for task dumps with Tokio"
 categories = ["asynchronous", "development-tools::debugging"]
 
+[package.metadata.battery-pack]
+ci-battery-pack = { features = [] }
+
 [dependencies]
