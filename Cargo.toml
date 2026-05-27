@@ -12,3 +12,7 @@ description = "Utilities for task dumps with Tokio"
 categories = ["asynchronous", "development-tools::debugging"]
 
 [dependencies]
+tokio = { version = "1.52.3", features = ["rt", "taskdump"] }
+
+[dev-dependencies]
+tokio = { version = "1.52.3", features = ["rt", "rt-multi-thread", "macros", "taskdump"] }

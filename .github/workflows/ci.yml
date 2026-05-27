@@ -46,7 +46,7 @@ jobs:
   warnings:
     runs-on: ubuntu-latest
     env:
-      RUSTFLAGS: "-Dwarnings"
+      RUSTFLAGS: "--cfg tokio_unstable -Dwarnings"
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
@@ -127,6 +127,8 @@ jobs:
   # Ensure minimum dependency versions work (https://doc.rust-lang.org/cargo/reference/resolver.html)
   minimal-versions:
     runs-on: ubuntu-latest
+    env:
+      RUSTFLAGS: "--cfg tokio_unstable"
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
